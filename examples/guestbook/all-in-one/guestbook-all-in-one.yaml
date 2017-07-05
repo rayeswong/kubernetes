@@ -97,7 +97,9 @@ spec:
   # an external load-balanced IP for the frontend service.
   # type: LoadBalancer
   ports:
+  type: NodePort
   - port: 80
+  - nodePort: 30002
   selector:
     app: guestbook
     tier: frontend
